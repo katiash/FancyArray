@@ -2,13 +2,13 @@
 
 function prtArr(arr, s, r){
 
-    if(r){
+    if(r==1){
         // es5
         var newarr=arr.reverse();
-        newarr.forEach((elem, index) => console.log(index + s + elem));
+        newarr.forEach((elem, index) => console.log(arr.length-index-1 + s + elem));
         
             // es6
-        newarr.forEach((elem, index) => console.log(`${index} ${s} ${elem}`));
+        newarr.forEach((elem, index) => console.log(`${arr.length-index-1} ${s} ${elem}`));
         
     }
  
@@ -24,7 +24,7 @@ function prtArr(arr, s, r){
 
 var sample = ["James", "Jill", "Jane", "Jack"];
 var symbol = "->";
-var reverse ="true";
+var reverse ="false";
 
 prtArr(sample, symbol, reverse);
 
